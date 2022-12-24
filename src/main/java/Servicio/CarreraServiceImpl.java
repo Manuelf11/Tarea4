@@ -32,6 +32,7 @@ public CarreraServiceImpl(){
     }
 
 
+       @Override
     public Carrera buscaCodigo(int codigo) {
         Carrera retorno = null;
         for (Carrera carrera : this.carreraList) {
@@ -42,6 +43,32 @@ public CarreraServiceImpl(){
             }
         }
         return retorno;
+    }
+    @Override
+    public void modificar(Carrera carrera, int codigo) {
+        int indice = -1;
+        for (Carrera universidades : this.carreraList) {
+            indice++;
+            if (codigo == universidades.getCodigo()) {
+                this.carreraList.set(indice, carrera);
+
+            }
+
+        }
+    }
+
+    @Override
+    public void eliminar(int codigo) {
+        int indice = -1;
+        for (Carrera carreras : this.carreraList) {
+            indice++;
+            if (codigo == carreras.getCodigo()) {
+                this.carreraList.remove(indice);
+
+            }
+
+        }
+
     }
     
 }

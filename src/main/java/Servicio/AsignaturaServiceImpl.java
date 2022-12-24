@@ -28,5 +28,29 @@ this.asiganturaList=new ArrayList<>();
     public List<Asignatura> listar() {
         return this.asiganturaList;
     }
-    
+     @Override
+    public void modificar(Asignatura asignatura, int codigo) {
+        int indice = -1;
+        for (Asignatura asignaturas : this.asiganturaList) {
+            indice++;
+            if (codigo == asignaturas.getCodigo()) {
+                this.asiganturaList.set(indice, asignatura);
+
+            }
+
+        }
+    }
+
+    @Override
+    public void eliminar(int codigo) {
+        int indice = -1;
+        for (Asignatura asignatura : this.asiganturaList) {
+            indice++;
+            if (codigo == asignatura.getCodigo()) {
+                this.asiganturaList.remove(indice);
+
+            }
+
+        }
+    }
 }

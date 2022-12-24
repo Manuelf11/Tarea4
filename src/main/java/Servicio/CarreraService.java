@@ -14,6 +14,12 @@ import java.util.List;
 public interface CarreraService {
 
     public void crear(Carrera carrera); 
-   public List<Carrera> listar();
-   public Carrera buscaCodigo(int codigo);
+    
+    public List<Carrera> listar();
+    
+    public Carrera buscaCodigo(int codigo);
+   
+    public void modificar(Carrera carrera, int codigo);
+
+    public void eliminar(int codigo);
 }

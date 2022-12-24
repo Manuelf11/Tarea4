@@ -13,5 +13,10 @@ import java.util.List;
  */
 public interface AsignaturaService {
     public void crear(Asignatura asignatura);
+    
     public List<Asignatura> listar();
+    
+    public void modificar(Asignatura asignatura, int codigo);
+
+    public void eliminar(int codigo);
 }
